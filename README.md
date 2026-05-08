@@ -38,47 +38,47 @@ The Franken subset provides sequential structure (plate number + glyph index enc
 
 ```
 hieroglyph-recognition/
-├── README.md                          # This file
-├── ARCHITECTURE.md                    # Detailed architecture specs for all phases
-├── requirements.txt                   # Python dependencies
+├── README.md
+├── ARCHITECTURE.md
+├── requirements.txt
 │
-├── notebooks/
+├── notebooks/                         # All experiments and deliverables
 │   ├── deliverable2_dataset.ipynb     # Dataset exploration, merging, enrichment
-│   ├── phase1_cnn_baseline.ipynb      # ResNet-18 baseline (+ Glyphnet/ConvNeXt comparison)
+│   ├── phase1_cnn_baseline.ipynb      # CNN baseline experiments (ResNet-18, comparisons)
 │   ├── phase2_cnn_ngram.ipynb         # N-gram re-ranking pipeline
-│   ├── phase3_cnn_transformer.ipynb   # Transformer encoder for sequence labeling
-│   ├── deliverable4_original.ipynb    # First fine-tuning attempt (+0.20%)
-│   └── deliverable4_enhanced.ipynb    # LLRD fine-tuning + diagnostic analysis
+│   ├── phase3_cnn_transformer.ipynb   # Transformer-based sequence modeling
+│   ├── deliverable4_original.ipynb    # Initial fine-tuning attempt
+│   └── deliverable4_enhanced.ipynb    # LLRD fine-tuning + diagnostics
 │
-├── src/
+├── src/                               # Core implementation code
 │   ├── models/
-│   │   ├── resnet_classifier.py       # ResNet-18 with freeze/unfreeze controls
-│   │   └── transformer.py             # HieroglyphTransformer (encoder + classifier)
+│   │   ├── resnet_classifier.py
+│   │   └── transformer.py
+│   │
 │   ├── data/
-│   │   ├── glyph_dataset.py           # HieroglyphDataset (single image)
-│   │   ├── sequence_dataset.py        # GlyphSequenceDataset (pre-extracted features)
-│   │   └── live_sequence_dataset.py   # LiveSequenceDataset (on-the-fly CNN)
+│   │   ├── glyph_dataset.py
+│   │   ├── sequence_dataset.py
+│   │   └── live_sequence_dataset.py
+│   │
 │   ├── ngram/
-│   │   └── ngram_model.py             # HieroglyphNgramModel + CNNNgramPipeline
+│   │   └── ngram_model.py
+│   │
 │   └── utils/
-│       ├── transforms.py              # Train/eval transforms
-│       ├── splits.py                  # Stratified splitting logic
-│       └── metrics.py                 # Evaluation functions (full_eval, BLEU, etc.)
+│       ├── transforms.py
+│       ├── splits.py
+│       └── metrics.py
 │
-├── configs/
-│   ├── phase1.yaml                    # Phase 1 hyperparameters
-│   ├── phase2.yaml                    # Phase 2 alpha search config
-│   ├── phase3.yaml                    # Phase 3 transformer config
-│   └── deliverable4.yaml              # D4 LLRD config
+├── data/                              # Dataset files (added in repo)
+│   └── ...                            # raw + processed datasets
 │
-├── results/
+├── results/                           # Task/phase outputs
 │   ├── phase1_results.json
 │   ├── phase2_results.json
 │   ├── phase3_results.json
 │   ├── d4_results.json
 │   └── d4e_results.json
 │
-├── figures/
+├── plots/                             # Visualization outputs (Task 5 + others)
 │   ├── phase1_training_curves.png
 │   ├── phase1_confusion_matrix.png
 │   ├── phase2_alpha_tuning.png
@@ -88,15 +88,16 @@ hieroglyph-recognition/
 │   ├── d4e_bleu.png
 │   └── d4e_summary_dashboard.png
 │
-├── checkpoints/                       # (not tracked in git — download separately)
+├── checkpoints/                       # Model weights (not tracked / .gitkeep)
 │   ├── resnet18_best.pth
 │   ├── transformer_best.pth
 │   └── transformer_finetuned_best_v2.pth
 │
-└── report/
-    ├── main.tex                       # LaTeX report
-    ├── main.bib                       # Bibliography
-    └── figures/                       # Report figures (symlinked or copied)
+├── paper/                             # Research report (LaTeX)
+│   ├── SOA survery
+│   └── Report/
+│
+└── .gitignore
 ```
 
 ---
