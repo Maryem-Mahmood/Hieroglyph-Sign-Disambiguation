@@ -117,6 +117,13 @@ Frozen ResNet-18 features → Linear projection (512→256) + learned positional
 Two attempts: (1) Original — naive progressive unfreezing, +0.20% improvement. (2) Enhanced — LLRD with per-layer learning rates, stronger regularisation, +1.19% accuracy and +1.53% F1 with comprehensive diagnostic analysis.
 
 ---
+## Outputs:
+Task 5: https://www.kaggle.com/datasets/maryemmahmood/task-5-outputs
+Phase 4: https://www.kaggle.com/datasets/maryemmahmood/phase4outputs
+Phase 1: https://www.kaggle.com/datasets/maryemmahmood/phase1outputs
+Phase 2: https://www.kaggle.com/datasets/maryemmahmood/phase2outputs
+Phase 3: https://www.kaggle.com/datasets/maryemmahmood/phase3outputs
+---
 
 ## Setup & Reproduction
 
