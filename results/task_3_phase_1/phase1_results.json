@@ -1,0 +1,16 @@
+{
+  "model": "ResNet-18 (ImageNet pretrained, frozen layers, fine-tuned on Glyph2025)",
+  "dataset": "Glyph2025 (EHT + Franken merged, 13,287 images)",
+  "num_classes": 176,
+  "train_images": 8985,
+  "val_images": 1925,
+  "test_images": 1926,
+  "test_top1": 0.6671858774662512,
+  "test_top5": 0.9361370716510904,
+  "macro_f1": 0.62045608040361,
+  "weighted_f1": 0.6819718978065729,
+  "macro_precision": 0.6161976208831543,
+  "macro_recall": 0.7126143243891866,
+  "best_val_top1": 0.6722077922077923,
+  "feature_dim": 512
+}
