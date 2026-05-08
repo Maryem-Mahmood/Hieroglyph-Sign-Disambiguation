@@ -37,60 +37,32 @@ The Franken subset provides sequential structure (plate number + glyph index enc
 <details>
 <summary><h3>I) Repository Structure</h3></summary>
 
-```
-hieroglyph-recognition/
-├── README.md
-├── ARCHITECTURE.md
-├── requirements.txt
+```Hieroglyph-Sign-Disambiguation/
 │
-├── notebooks/                         # All experiments and deliverables
-│   ├── deliverable2_dataset.ipynb     # Dataset exploration, merging, enrichment
-│   ├── phase1_cnn_baseline.ipynb      # CNN baseline experiments (ResNet-18, comparisons)
-│   ├── phase2_cnn_ngram.ipynb         # N-gram re-ranking pipeline
-│   ├── phase3_cnn_transformer.ipynb   # Transformer-based sequence modeling
-│   ├── deliverable4_original.ipynb    # Initial fine-tuning attempt
-│   └── deliverable4_enhanced.ipynb    # LLRD fine-tuning + diagnostics
+├── notebooks/                         
+│   ├── task_3_phase_1.ipynb           
+│   ├── task_3_phase_2.ipynb           
+│   ├── task_3_phase_3.ipynb          
+│   ├── task_4.ipynb                   
+│   └── task_5.ipynb                   
 │
-├── src/                               # Core implementation code
-│   ├── models/
-│   │   ├── resnet_classifier.py
-│   │   └── transformer.py
-│   ├── data/
-│   │   ├── glyph_dataset.py
-│   │   ├── sequence_dataset.py
-│   │   └── live_sequence_dataset.py
-│   ├── ngram/
-│   │   └── ngram_model.py
-│   └── utils/
-│       ├── transforms.py
-│       ├── splits.py
-│       └── metrics.py
+├── plots/                            
+│   ├── task_3_phase_1/                
+│   ├── task_3_phase_2/                
+│   ├── task_3_phase_3/               
+│   ├── task_4/                        
+│   └── task_5/                       
 │
-├── data/                              # Dataset files
+├── results/                           
+│   ├── task_3_phase_1/                
+│   ├── task_3_phase_2/                
+│   ├── task_3_phase_3/               
+│   ├── task_4/                        
+│   └── task_5/                        
 │
-├── results/                           # Task/phase outputs
-│   ├── phase1_results.json
-│   ├── phase2_results.json
-│   ├── phase3_results.json
-│   ├── d4_results.json
-│   └── d4e_results.json
-│
-├── plots/                             # Visualization outputs
-│   ├── phase1_training_curves.png
-│   ├── phase1_confusion_matrix.png
-│   ├── phase2_alpha_tuning.png
-│   ├── phase3_training_curves.png
-│   ├── d4e_training_curves.png
-│   ├── d4e_per_class_f1.png
-│   ├── d4e_bleu.png
-│   └── d4e_summary_dashboard.png
-│
-├── paper/                             # Research report
-│   ├── SOA survey
-│   └── Report/
-│
-└── .gitignore
-```
+└── paper/                             
+├── 41_27100432_27100407.pdf       
+└── .gitkeep
 
 </details>
 
