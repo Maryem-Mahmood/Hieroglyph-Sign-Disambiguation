@@ -1,0 +1,17 @@
+{
+  "model": "CNN + Transformer (progressive fine-tuning from Phase 3)",
+  "dataset": "Glyph2025 sequences (Franken reading order)",
+  "num_classes": 176,
+  "stage_a_best_val": 0.7350746268656716,
+  "stage_b_best_val": 0.7350746268656716,
+  "per_position_acc": 0.7370517928286853,
+  "sequence_acc": 0.0,
+  "macro_f1": 0.4804698816146226,
+  "weighted_f1": 0.707091652376253,
+  "macro_precision": 0.5083390140769233,
+  "macro_recall": 0.494368992956959,
+  "phase3_baseline": 0.7350597609561753,
+  "delta_vs_phase3": 0.0019920318725099584,
+  "phase1_baseline": 0.6671858774662512,
+  "delta_vs_phase1": 0.06986591536243403
+}
