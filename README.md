@@ -37,32 +37,34 @@ The Franken subset provides sequential structure (plate number + glyph index enc
 <details>
 <summary><h3>I) Repository Structure</h3></summary>
 
-```Hieroglyph-Sign-Disambiguation/
+```
+Hieroglyph-Sign-Disambiguation/
 │
-├── notebooks/                         
-│   ├── task_3_phase_1.ipynb           
-│   ├── task_3_phase_2.ipynb           
-│   ├── task_3_phase_3.ipynb          
-│   ├── task_4.ipynb                   
-│   └── task_5.ipynb                   
+├── notebooks/
+│   ├── task_3_phase_1.ipynb
+│   ├── task_3_phase_2.ipynb
+│   ├── task_3_phase_3.ipynb
+│   ├── task_4.ipynb
+│   └── task_5.ipynb
 │
-├── plots/                            
-│   ├── task_3_phase_1/                
-│   ├── task_3_phase_2/                
-│   ├── task_3_phase_3/               
-│   ├── task_4/                        
-│   └── task_5/                       
+├── plots/
+│   ├── task_3_phase_1/
+│   ├── task_3_phase_2/
+│   ├── task_3_phase_3/
+│   ├── task_4/
+│   └── task_5/
 │
-├── results/                           
-│   ├── task_3_phase_1/                
-│   ├── task_3_phase_2/                
-│   ├── task_3_phase_3/               
-│   ├── task_4/                        
-│   └── task_5/                        
+├── results/
+│   ├── task_3_phase_1/
+│   ├── task_3_phase_2/
+│   ├── task_3_phase_3/
+│   ├── task_4/
+│   └── task_5/
 │
-└── paper/                             
-├── 41_27100432_27100407.pdf       
-└── .gitkeep
+└── paper/
+    ├── 41_27100432_27100407.pdf
+    └── .gitkeep
+```
 
 </details>
 
@@ -113,19 +115,22 @@ pip install torch torchvision numpy pandas matplotlib seaborn scikit-learn pillo
 
 **Data sources:**
 
-1. Glyph2025: Download EHT from GitHub and Franken from HuggingFace. Merge using `notebooks/deliverable2_dataset.ipynb`.
+1. Glyph2025: Download EHT from GitHub and Franken from HuggingFace.
 2. N-gram data: Download `nGrams.txt` and `Lexicon.txt` from the HuggingFace mirror.
 
 **Training order (run on Kaggle, T4 GPU recommended):**
-deliverable2_dataset.ipynb
-↓
-phase1_cnn_baseline.ipynb
-↓
-phase2_cnn_ngram.ipynb
-↓
-phase3_cnn_transformer.ipynb
-↓
-deliverable4_enhanced.ipynb
+
+```
+notebooks/task_3_phase_1.ipynb
+    ↓
+notebooks/task_3_phase_2.ipynb
+    ↓
+notebooks/task_3_phase_3.ipynb
+    ↓
+notebooks/task_4.ipynb
+    ↓
+notebooks/task_5.ipynb
+```
 
 Each notebook saves checkpoints and results JSON files consumed by subsequent phases.
 
