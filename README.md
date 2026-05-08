@@ -2,7 +2,7 @@
 
 **CS437 / CS5317 / EE414 / EE513, Deep Learning, Spring 2026**
 
-**Authors:** Maryem Mahmood (27100407), Zehra Talat (27100432)
+**Authors:** Maryem Mahmood (27100432), Zehra Talat (27100407)
 
 ---
 
