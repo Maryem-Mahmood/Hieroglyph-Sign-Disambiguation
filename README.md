@@ -37,67 +37,34 @@ The Franken subset provides sequential structure (plate number + glyph index enc
 ## Repository Structure
 
 ```
-hieroglyph-recognition/
-├── README.md
-├── ARCHITECTURE.md
-├── requirements.txt
+Hieroglyph-Sign-Disambiguation/
 │
-├── notebooks/                         # All experiments and deliverables
-│   ├── deliverable2_dataset.ipynb     # Dataset exploration, merging, enrichment
-│   ├── phase1_cnn_baseline.ipynb      # CNN baseline experiments (ResNet-18, comparisons)
-│   ├── phase2_cnn_ngram.ipynb         # N-gram re-ranking pipeline
-│   ├── phase3_cnn_transformer.ipynb   # Transformer-based sequence modeling
-│   ├── deliverable4_original.ipynb    # Initial fine-tuning attempt
-│   └── deliverable4_enhanced.ipynb    # LLRD fine-tuning + diagnostics
+├── notebooks/                          # All experiments (task-based pipeline)
+│   ├── task_3_phase_1.ipynb           # CNN baseline (ResNet / GlyphNet comparisons)
+│   ├── task_3_phase_2.ipynb           # N-gram re-ranking + contextual refinement
+│   ├── task_3_phase_3.ipynb           # Transformer-based sequence modeling
+│   ├── task_4.ipynb                   # Fine-tuning experiments (LLRD / improvements)
+│   └── task_5.ipynb                   # Final evaluation + full system analysis
 │
-├── src/                               # Core implementation code
-│   ├── models/
-│   │   ├── resnet_classifier.py
-│   │   └── transformer.py
-│   │
-│   ├── data/
-│   │   ├── glyph_dataset.py
-│   │   ├── sequence_dataset.py
-│   │   └── live_sequence_dataset.py
-│   │
-│   ├── ngram/
-│   │   └── ngram_model.py
-│   │
-│   └── utils/
-│       ├── transforms.py
-│       ├── splits.py
-│       └── metrics.py
+├── plots/                             # Visual outputs per task/phase
+│   ├── task_3_phase_1/                # Training curves, confusion matrices
+│   ├── task_3_phase_2/                # Alpha tuning + re-ranking visuals
+│   ├── task_3_phase_3/                # Transformer training + evaluation plots
+│   ├── task_4/                        # Fine-tuning diagnostics
+│   └── task_5/                        # Final results + dashboards
 │
-├── data/                              # Dataset files (added in repo)
-│   └── ...                            # raw + processed datasets
+├── results/                           # Structured experimental outputs
+│   ├── task_3_phase_1/                # CNN baseline metrics
+│   ├── task_3_phase_2/                # N-gram + reranking results
+│   ├── task_3_phase_3/                # Transformer outputs
+│   ├── task_4/                        # Fine-tuning results
+│   └── task_5/                        # Final consolidated evaluation
 │
-├── results/                           # Task/phase outputs
-│   ├── phase1_results.json
-│   ├── phase2_results.json
-│   ├── phase3_results.json
-│   ├── d4_results.json
-│   └── d4e_results.json
-│
-├── plots/                             # Visualization outputs (Task 5 + others)
-│   ├── phase1_training_curves.png
-│   ├── phase1_confusion_matrix.png
-│   ├── phase2_alpha_tuning.png
-│   ├── phase3_training_curves.png
-│   ├── d4e_training_curves.png
-│   ├── d4e_per_class_f1.png
-│   ├── d4e_bleu.png
-│   └── d4e_summary_dashboard.png
-│
-├── checkpoints/                       # Model weights (not tracked / .gitkeep)
-│   ├── resnet18_best.pth
-│   ├── transformer_best.pth
-│   └── transformer_finetuned_best_v2.pth
-│
-├── paper/                             # Research report (LaTeX)
-│   ├── SOA survery
-│   └── Report/
-│
-└── .gitignore
+└──  paper/                             # Research documentation
+    ├── Context_Aware_Classification_of_Egyptian_Hieroglyphs.pdf
+    ├── 41_27100432_27100407.pdf       # SOA survey
+    └── .gitkeep
+
 ```
 
 ---
