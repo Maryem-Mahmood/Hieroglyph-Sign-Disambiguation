@@ -1,0 +1,21 @@
+{
+  "best_alpha": 1.0,
+  "num_classes": 176,
+  "test_sequences": 1000,
+  "test_positions": 18555,
+  "visual_only": {
+    "per_pos_acc": 0.7281056319051469,
+    "macro_f1": 0.6405398567300762,
+    "seq_acc": 0.014
+  },
+  "bigram": {
+    "per_pos_acc": 0.8843438426300189,
+    "macro_f1": 0.8055852459336175,
+    "seq_acc": 0.159
+  },
+  "trigram": {
+    "per_pos_acc": 0.8920506601994072,
+    "macro_f1": 0.7932575061605666,
+    "seq_acc": 0.28
+  }
+}
