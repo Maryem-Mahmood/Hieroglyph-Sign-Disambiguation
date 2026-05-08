@@ -36,6 +36,8 @@ The Franken subset provides sequential structure (plate number + glyph index enc
 
 <details>
 <summary><h3>I) Repository Structure</h3></summary>
+
+```
 hieroglyph-recognition/
 ├── README.md
 ├── ARCHITECTURE.md
@@ -88,6 +90,7 @@ hieroglyph-recognition/
 │   └── Report/
 │
 └── .gitignore
+```
 
 </details>
 
