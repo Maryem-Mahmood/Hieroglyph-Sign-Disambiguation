@@ -1,0 +1,14 @@
+{
+  "model": "CNN + Transformer (ResNet-18 frozen, Glyph2025)",
+  "dataset": "Glyph2025 sequences (Franken reading order)",
+  "num_classes": 176,
+  "per_position_acc": 0.7350597609561753,
+  "sequence_acc": 0.0,
+  "macro_f1": 0.49900380938631284,
+  "weighted_f1": 0.7107432721726911,
+  "macro_precision": 0.5109112141194497,
+  "macro_recall": 0.5230804581189044,
+  "best_val_acc": 0.7313432835820896,
+  "phase1_top1": 0.6671858774662512,
+  "delta_vs_phase1": 0.06787388348992407
+}
